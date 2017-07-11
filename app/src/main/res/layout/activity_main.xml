@@ -28,12 +28,17 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:background="@android:color/white">
                     <krelve.view.Kanner
                         android:id="@+id/show_event_detail_bg"
                         android:layout_width="match_parent"
-                        android:layout_height="130dp" />
+                        android:layout_height="120dp" />
                     <include layout="@layout/layout_test_hint" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="#f5f5f5" />
 
                 </LinearLayout>
                 <!-- <TextView
@@ -66,11 +71,21 @@
 
 
         <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
-        <android.support.v4.view.ViewPager
-            android:id="@+id/viewPager"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#f5f5f5" />
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
         <!--<android.support.v7.widget.RecyclerView
             android:id="@+id/rec"
             android:layout_width="match_parent"
